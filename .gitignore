@@ -1,0 +1,15 @@
+# dependencies
+deps/*
+
+# vscode
+*.vscode
+
+# idea
+*.idea
+
+# mac cache
+*.DS_Store
+
+# binary file
+build/
+cmake-build-*/

@@ -2,12 +2,14 @@
 
 This repository is developed based on [OpenCheetah](https://github.com/Alibaba-Gemini-Lab/OpenCheetah), and provides a proof-of-concept implementation of the paper [Rhombus](https://eprint.iacr.org/2024/1611.pdf). In summary, this project contains the following components:
 
-- Tests for the protocols: matrix-vector multiplication, matrix-matrix multiplication
+- Tests for the protocols: matrix-vector multiplication, matrix-matrix multiplication in Rhombus
 - End-to-end implementation of secure two-party inference of ResNet50 model
 
-If someone wants to learn more details about the algorithms in [Rhombus](https://eprint.iacr.org/2024/1611.pdf), refer to [here](https://github.com/2646jx/Rhombus), in which we provide a pure implementation without the network transmission.
+If you are more interested in the implementation of the algorithms in Rhombus, rather than its performance in secure two-party inference, we also provide a cleaner implementation [here](https://github.com/2646jx/Rhombus), which includes only the Rhombus algorithm itself, without any modules related to the network communication.
 
 ## Building
+
+We prefer to compile on Linux OS, and we have successfully compiled it on Ubuntu by executing the following commands.
 
 Run the following command to build the dependencies:
 
@@ -82,30 +84,30 @@ After running the protocols successfully, the performance data will be printed. 
 To run [Cheetah](https://eprint.iacr.org/2022/207.pdf), execute the following command in client terminal:
 
 ```PowerShell
-sh scripts/run-client.sh cheetah resnet50
+bash scripts/run-client.sh cheetah resnet50
 ```
 
 In the server terminal, execute:
 
 ```PowerShell
-sh scripts/run-server.sh cheetah resnet50
+bash scripts/run-server.sh cheetah resnet50
 ```
 
 To run [Rhombus](https://eprint.iacr.org/2024/1611.pdf), you can directly change the `cheetah` by `rhombus` in the above commands. In particular, run this
 command in client terminal:
 
 ```PowerShell
-sh scripts/run-client.sh rhombus resnet50
+bash scripts/run-client.sh rhombus resnet50
 ```
 
 In server terminal, run:
 
 ```PowerShell
-sh scripts/run-server.sh cheetah resnet50
+bash scripts/run-server.sh cheetah resnet50
 ```
 
 After running the two programs, the performance results will be printed in the server's terminal.
 
 ## LICENSE
 
-This project is licensed under the MIT License. See the [LICENSE] file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
