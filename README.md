@@ -103,7 +103,7 @@ bash scripts/run-client.sh rhombus resnet50
 In server terminal, run:
 
 ```PowerShell
-bash scripts/run-server.sh cheetah resnet50
+bash scripts/run-server.sh rhombus resnet50
 ```
 
 After running the two programs, the performance results will be printed in the server's terminal.
