@@ -23,7 +23,7 @@ git checkout 44b1dde
 patch --quiet --no-backup-if-mismatch -N -p1 -i $WORK_DIR/patch/emp-tool.patch -d $DEPS_DIR/$target
 mkdir -p $BUILD_DIR/deps/$target
 cd $BUILD_DIR/deps/$target
-cmake $DEPS_DIR/$target -DCMAKE_INSTALL_PREFIX=$BUILD_DIR
+cmake $DEPS_DIR/$target -DCMAKE_INSTALL_PREFIX=$BUILD_DIR -DOPENSSL_ROOT_DIR=$BUILD_DIR
 make install -j2
 
 target=emp-ot
